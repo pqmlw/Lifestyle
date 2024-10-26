@@ -29,7 +29,6 @@
             font-size: 50px !important;
         }
 
-        .nav-link.active,
         .nav-link {
             color: #65141d !important;
             font-family: 'Cormorant Garamond', serif;
@@ -38,7 +37,7 @@
         }
 
         .nav-link:hover {
-            color: #420e14 !important;
+            color: #ff6d7e !important;
         }
 
         h1,
@@ -47,8 +46,15 @@
             font-family: 'Cormorant Garamond', serif;
         }
 
-        html {
-            scroll-behavior: smooth;
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -80,16 +86,16 @@
         </div>
     </nav>
 
-    <div id="home">
+    <div id="home" class="section-hidden">
     </div>
 
-    <div id="about">
+    <div id="about" class="section-hidden">
     </div>
 
-    <div id="categories">
+    <div id="categories" class="section-hidden">
     </div>
 
-    <div id="subscribe">
+    <div id="subscribe" class="section-hidden">
     </div>
 
     <footer id="footer">
@@ -116,6 +122,22 @@
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                } else {
+                    entry.target.classList.remove('section-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.section-hidden').forEach((section) => {
+            observer.observe(section);
+        });
     </script>
 </body>
 
