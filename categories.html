@@ -19,21 +19,9 @@
             font-family: 'Cormorant Garamond', serif;
         }
 
-        .btn-custom {
-            background-color: #65141d !important;
-            border-color: #65141d !important;
-            color: #fff !important;
-        }
-
-        .btn-custom:hover {
-            background-color: #65141d;
-            border-color: #65141d;
-        }
-
         .card {
             transition: transform 0.3s ease;
             overflow: hidden;
-            /* Hide any overflow */
         }
 
         .card:hover {
@@ -42,88 +30,102 @@
 
         .card-img-top {
             width: 100%;
-            /* Make the image fill the card width */
             height: 200px;
-            /* Fixed height for the image */
             object-fit: cover;
-            /* Cover the area while maintaining aspect ratio */
         }
     </style>
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container pt-4">
         <h2 class="text-center mb-4">Categories</h2>
         <div class="row pb-4">
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/images/dark.jpg" class="card-img-top" alt="Category 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Dark Inspired</h5>
-                        <p class="card-text">Explore our collection of dark-inspired clothing that combines elegance and
-                            edge.</p>
+                <a href="#dark" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/dark.jpg" class="card-img-top" alt="Category 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dark Inspired</h5>
+                            <p class="card-text">Explore our collection of dark-inspired clothing that combines elegance
+                                and edge.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/images/goth.jpg" class="card-img-top" alt="Category 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Gothic Fashion</h5>
-                        <p class="card-text">Discover gothic fashion pieces that add a touch of mystery to your
-                            wardrobe.</p>
+                <a href="#gothic" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/goth.jpg" class="card-img-top" alt="Category 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Gothic Fashion</h5>
+                            <p class="card-text">Discover gothic fashion pieces that add a touch of mystery to your
+                                wardrobe.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/images/alter.jpg" class="card-img-top" alt="Category 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Alternative Styles</h5>
-                        <p class="card-text">Browse our alternative styles that break the mold and showcase your unique
-                            personality.</p>
+                <a href="#alternative" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/alter.jpg" class="card-img-top" alt="Category 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Alternative Styles</h5>
+                            <p class="card-text">Browse our alternative styles that break the mold and showcase your
+                                unique
+                                personality.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="row pb-4">
             <!-- Card 4 -->
             <div class="col-md-4 mb-5">
-                <div class="card">
-                    <img src="/images/street.jpg" class="card-img-top" alt="Category 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Streetwear</h5>
-                        <p class="card-text">Stay trendy with our collection of streetwear that defines urban style.</p>
+                <a href="#streetwear" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/street.jpg" class="card-img-top" alt="Category 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Streetwear</h5>
+                            <p class="card-text">Stay trendy with our collection of streetwear that defines urban style.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Card 5 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/images/vintage.jpg" class="card-img-top" alt="Category 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Vintage Looks</h5>
-                        <p class="card-text">Rediscover timeless pieces that bring vintage charm to modern outfits.</p>
+                <a href="#vintage" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/vintage.jpg" class="card-img-top" alt="Category 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Vintage Looks</h5>
+                            <p class="card-text">Rediscover timeless pieces that bring vintage charm to modern outfits.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Card 6 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="/images/edgy.jpg" class="card-img-top" alt="Category 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Edgy Accessories</h5>
-                        <p class="card-text">Complete your look with our range of edgy accessories that make a
-                            statement.</p>
+                <a href="#accessories" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/images/edgy.jpg" class="card-img-top" alt="Category 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Edgy Accessories</h5>
+                            <p class="card-text">Complete your look with our range of edgy accessories that make a
+                                statement.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

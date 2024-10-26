@@ -14,18 +14,8 @@
             font-family: 'Cormorant Garamond', serif;
         }
 
-        h1,
-        h5,
-        p {
+        h1 {
             font-family: 'Cormorant Garamond', serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .carousel-item {
-            position: relative;
         }
 
         .carousel-item img {
@@ -33,73 +23,38 @@
             height: auto;
         }
 
+        .carousel-item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
         .carousel-caption {
             position: absolute;
-            top: 40%;
-            left: 50%;
+            top: 50%;
+            padding-right: 10%;
+            transform: translate(0%, -20%);
+            width: 80%;
             color: white;
             text-align: center;
-            padding: 10px;
         }
 
-        .custom-button {
-            background-color: #f6ac8f;
-            border-color: #f6ac8f;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .custom-button:hover {
-            background-color: #e6957a;
-            border-color: #e6957a;
-        }
-
-        section {
-            padding: 100px 0;
-            text-align: center;
-            border-bottom: 1px solid #ccc;
-        }
-
-        #about {
-            background-color: #f9f9f9;
-        }
-
-        #categories {
-            background-color: #e9ecef;
-        }
-
-        #subscribe {
-            background-color: #f9f9f9;
+        @media (max-width: 768px) {
+            .carousel-caption {
+                width: 90%;
+                top: 60%;
+                transform: translate(-10%, -150%);
+            }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Pomefiore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#categories">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#subscribe">Join Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -134,47 +89,7 @@
         </button>
     </div>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a fashion brand dedicated to providing exclusive collections.</p>
-    </section>
-
-    <section id="categories">
-        <h2>Categories</h2>
-        <p>Explore our various product categories.</p>
-    </section>
-
-    <section id="subscribe">
-        <h2>Join Us</h2>
-        <p>Subscribe to our newsletter for updates!</p>
-    </section>
-
-    <footer id="footer">
-        <p>&copy; 2024 Pomefiore. All rights reserved.</p>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('navbar').innerHTML = data);
-
-        fetch('about.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('about').innerHTML = data);
-
-        fetch('categories.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('categories').innerHTML = data);
-
-        fetch('subscribe.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('subscribe').innerHTML = data);
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
 </body>
 
 </html>

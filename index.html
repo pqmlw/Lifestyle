@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomefiore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navbar-custom {
+            background-color: #eddbbf;
+        }
+
+        .navbar-brand {
+            color: #65141d !important;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 900 !important;
+            font-size: 50px !important;
+        }
+
+        .nav-link.active,
+        .nav-link {
+            color: #65141d !important;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500 !important;
+            font-size: 25px !important;
+        }
+
+        .nav-link:hover {
+            color: #420e14 !important;
+        }
+
+        h1,
+        h5,
+        p {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pomefiore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subscribe">Join Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home">
+    </div>
+
+    <div id="about">
+    </div>
+
+    <div id="categories">
+    </div>
+
+    <div id="subscribe">
+    </div>
+
+    <footer id="footer">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('home.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('home').innerHTML = data);
+
+        fetch('about.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('about').innerHTML = data);
+
+        fetch('categories.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('categories').innerHTML = data);
+
+        fetch('subscribe.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('subscribe').innerHTML = data);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+
+</html>
