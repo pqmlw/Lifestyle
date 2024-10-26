@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscribe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
         .bg-custom {
-            background-color: #eddbbf;
+            background-color: #212020;
         }
 
         .card-custom {
-            background-color: #d4c3a0;
-            border-color: #d4c3a0;
+            background-color: #434141 !important;
+            text-align: center;
         }
 
         .btn-info {
-            background-color: #eddbbf;
-            border-color: #eddbbf;
+            background-color: #212020 !important;
+            border-color: #212020 !important;
+            color: #fff !important;
         }
 
         .btn-info:hover {
-            background-color: #c8b59c;
-            border-color: #c8b59c;
+            background-color: #434141;
+            border-color: #434141;
         }
     </style>
 </head>
@@ -32,18 +40,18 @@
     <section class="bg-custom text-white py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="card p-4 card-custom text-white">
                         <h2 class="card-title mb-3">Join Our Community</h2>
                         <p class="card-text mb-4">Subscribe for the latest lifestyle updates</p>
-                        <form class="row g-3">
-                            <div class="col-md-5">
+                        <form>
+                            <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="First Name" required>
                             </div>
-                            <div class="col-md-5">
+                            <div class="mb-3">
                                 <input type="email" class="form-control" placeholder="Email" required>
                             </div>
-                            <div class="col-md-2">
+                            <div>
                                 <button type="submit" class="btn btn-info w-100">Subscribe</button>
                             </div>
                         </form>
